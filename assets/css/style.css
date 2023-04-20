@@ -1,5 +1,6 @@
     /*=============== GOOGLE FONTS ===============*/
     @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
+
     /*=============== VARIABLES CSS ===============*/
     :root {
       --header-height: 3.5rem;
@@ -112,7 +113,7 @@
     /*========== Layout ==========*/
     .container {
       max-width: 968px;
-      margin:auto;
+      margin: auto;
     }
 
     .row {
@@ -136,6 +137,7 @@
       margin-left: var(--m-0-75);
       margin-bottom: var(--m-2-5);
     }
+
     /*========== Buttons ==========*/
 
     /*========== Header ==========*/
@@ -171,7 +173,7 @@
       height: 0.3rem;
       border-radius: 50%;
       background: var(--color-primary);
-      top:56%;
+      top: 56%;
       right: -0.25rem;
     }
 
@@ -186,7 +188,15 @@
 
     .nav-link {
       font-weight: var(--font-medium);
-      transition:.3s;
+      transition: .3s;
+    }
+
+    .nav-close {
+      font-size: 1rem;
+      position: absolute;
+      top: 1rem;
+      right: 1.25rem;
+      cursor: pointer;
     }
 
     .nav-btns {
@@ -196,19 +206,21 @@
     }
 
     .nav-link:hover {
-      color:var(--color-primary);
-    }
-    .nav-toggle {
-      font-size:1.2rem;
-      cursor:pointer;
+      color: var(--color-primary);
     }
 
+    .nav-toggle {
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .nav-close,
     .nav-toggle {
       display: none;
     }
 
-    .active-link{
-     position: relative;
+    .active-link {
+      position: relative;
     }
 
     /*========== Home ==========*/
@@ -216,22 +228,22 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height:100vh;
-      min-height:100vh;
+      height: 100vh;
+      min-height: 100vh;
     }
 
     .home .intro {
-      max-width:540px;
+      max-width: 540px;
       text-align: center;
     }
 
     .home .intro img {
-      margin-bottom:var(--m-1);
+      margin-bottom: var(--m-1);
     }
 
     .home .intro .social-icons {
-       margin-top:var(--m-1-5);
-       margin-bottom: var(--m-2)
+      margin-top: var(--m-1-5);
+      margin-bottom: var(--m-2)
     }
 
     .home .intro .social-icons li {
@@ -239,7 +251,7 @@
     }
 
     .home .intro .social-icons li:not(:last-child) {
-      margin-right:var(--m-1-5);
+      margin-right: var(--m-1-5);
     }
 
     .home .intro .social-icons a {
@@ -248,40 +260,44 @@
 
     .scroll-down {
       position: absolute;
-      bottom:var(--m-2-5);
-      left:0;
-      width:100%;
+      bottom: var(--m-2-5);
+      left: 0;
+      width: 100%;
     }
 
     .mouse-wrapper {
-      font-size:var(--small-font-size);
+      font-size: var(--small-font-size);
       display: block;
-      margin:auto;
-      max-width:100px;
+      margin: auto;
+      max-width: 100px;
       text-align: center;
     }
 
     @keyframes ani-mouse {
       0% {
-          top:20%;
+        top: 20%;
       }
+
       15% {
-        top:50%;
+        top: 50%;
       }
+
       50% {
-        top:50%;
+        top: 50%;
       }
+
       100% {
-        top:20%;
+        top: 20%;
       }
     }
+
     .mouse {
-      border:2px solid var(--color-dark);
+      border: 2px solid var(--color-dark);
       display: block;
       height: 1.75rem;
-      width:1.25rem;
-      margin:auto;
-      margin-top:var(--m-0-75);
+      width: 1.25rem;
+      margin: auto;
+      margin-top: var(--m-0-75);
       border-radius: var(--border-radius);
       position: relative;
     }
@@ -289,11 +305,11 @@
     .mouse .wheel {
       background: var(--color-dark);
       border-radius: 50%;
-      width:0.25rem;
-      height:0.25rem;
+      width: 0.25rem;
+      height: 0.25rem;
       position: absolute;
       top: var(--m-0-5);
-      left:40%;
+      left: 40%;
       display: block;
       animation: ani-mouse 1.3s linear infinite;
     }
@@ -301,37 +317,41 @@
     /*========== About ==========*/
 
     .about-img {
-      flex:0 0 25%;
+      flex: 0 0 25%;
       max-width: 25%;
     }
+
     .about-content {
-      flex:0 0 75%;
-      max-width:75%
+      flex: 0 0 75%;
+      max-width: 75%
     }
+
     .about-content .about-text,
     .about-content .skills {
-      flex:0 0 50%;
-      max-width:50%;  
+      flex: 0 0 50%;
+      max-width: 50%;
     }
+
     .rounded {
       background-color: var(--color-white);
-      padding:var(--card-padding);
+      padding: var(--card-padding);
       border-radius: var(--border-radius);
     }
 
     .about text p {
-      text-align:justify;
+      text-align: justify;
       margin-bottom: var(--m-1);
     }
 
-    .about-content .skills .skill-items{
-      flex: 0 0  100%;
-      max-width:100%;
+    .about-content .skills .skill-items {
+      flex: 0 0 100%;
+      max-width: 100%;
     }
 
     .about-content .skills .skill-items h4 {
-      margin-bottom : var(--m-0-75);
+      margin-bottom: var(--m-0-75);
     }
+
     .about-content .skills .skill-items .progress {
       background-color: var(--color-light);
       border-radius: var(--border-radius);
@@ -340,25 +360,28 @@
       position: relative;
       margin-bottom: var(--m-0-75);
     }
+
     .about-content .skills .skill-items .progress .progress-in {
       position: absolute;
-      left:0;
-      top:0;
-      height:100%;
+      left: 0;
+      top: 0;
+      height: 100%;
       border-radius: var(--border-radius);
     }
+
     .about-content .skills .skill-items .skills-percent {
-      position:absolute;
-      right:0;
-      top:-2.25rem;
+      position: absolute;
+      right: 0;
+      top: -2.25rem;
     }
 
     .fact-item {
       flex: 0 0 25%;
-      max-width:25%;
-      margin-top:var(--m-2-5);
-      text-align:center;
+      max-width: 25%;
+      margin-top: var(--m-2-5);
+      text-align: center;
     }
+
     .fact-item i {
       font-size: var(--h2-font-size);
       color: var(--color-gray);
@@ -370,28 +393,29 @@
 
     .portfolio-item {
       flex: 0 0 33.33%;
-      max-width:33.33%;
+      max-width: 33.33%;
       margin-bottom: var(--m-1-5)
     }
 
     .portfolio-item-inner {
       position: relative;
-      overflow:hidden;
+      overflow: hidden;
       border-radius: 8px;
     }
 
     .portfolio-item .mask {
       background-color: rgba(0, 0, 0, .9);
       position: absolute;
-      left:0;
-      top:0;
-      height:100%;
-      width:100%;
-      opacity:0;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
       transition: 0.3s;
     }
+
     .portfolio-item-inner:hover .mask {
-      opacity:0.9;
+      opacity: 0.9;
     }
 
     .portfolio-item .term {
@@ -400,7 +424,7 @@
       border-bottom-left-radius: 0.98rem;
       border-bottom-right-radius: 0.98rem;
       position: absolute;
-      top:0;
+      top: 0;
       left: var(--m-1-5);
       font-size: var(--small-font-size);
       display: inline-block;
@@ -410,44 +434,47 @@
     }
 
     .portfolio-item h3 {
-      color:#fff;
+      color: #fff;
       font-size: 1.25rem;
       margin: 0 0 0.98rem;
-      padding:0 1.25rem;
+      padding: 0 1.25rem;
       position: absolute;
-      top:3.75rem;
-      transition:0.3s;
+      top: 3.75rem;
+      transition: 0.3s;
       transform: translateY(30px);
-      opacity:0;
+      opacity: 0;
     }
 
     .portfolio-item .more-button {
-      color:#fff;
+      color: #fff;
       position: absolute;
-      bottom:var(--m-1-5);
+      bottom: var(--m-1-5);
       right: var(--m-1-5);
       font-size: 0.985rem;
       display: block;
       background: var(--color-primary);
       width: 3.5rem;
-      cursor:pointer;
+      cursor: pointer;
       border-radius: 25px;
       text-align: center;
       line-height: 28px;
       transition: 0.3s;
-      opacity:0;
+      opacity: 0;
     }
 
-    .portfolio-item-inner:hover h3, .portfolio-item-inner:hover:hover span {
-      opacity:1;
+    .portfolio-item-inner:hover h3,
+    .portfolio-item-inner:hover:hover span {
+      opacity: 1;
       transform: translateX(0);
     }
+
     /*========== Testimonial ==========*/
 
     /*========== Blog ==========*/
     .blog-item {
-      flex:0 0 33.33%;
-      max-width:33.33%;
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+      display: flex;
     }
 
     .blog-item .inner {
@@ -464,65 +491,73 @@
 
     .blog-item .thumb {
       position: relative;
-      overflow:hidden
+      overflow: hidden
     }
 
     .blog-item .thumb img {
       transform: scale(1);
-      transition:.3s;
+      transition: .3s;
 
     }
+
     .blog-item .thumb:hover img {
       transform: scale(1.1);
     }
+
     .blog-item .category {
       background-color: var(--color-primary);
       border-bottom-left-radius: 0.98rem;
       border-bottom-right-radius: 0.98rem;
       color: #fff;
       font-size: var(--small-font-size);
-      padding:0.12rem 0.5rem;
-      position:absolute;
-      left:1.25rem;
-      top:0;
-      z-index:1;
+      padding: 0.12rem 0.5rem;
+      position: absolute;
+      left: 1.25rem;
+      top: 0;
+      z-index: 1;
     }
+
     .blog-item .details {
-      padding:1.25rem;
+      padding: 1.25rem;
     }
 
     .blog-item .details .title {
-      line-height:1.2;
+      line-height: 1.2;
     }
 
     .blog-item .details .title a:hover {
-     color:var(--color-primary); 
+      color: var(--color-primary);
     }
 
     .blog-item .meta {
       font-size: var(--small-font-size);
-      color:var(--color-gray);
-      margin-top:0.5rem;
+      color: var(--color-gray);
+      margin-top: 0.5rem;
     }
+
     .blog-item .meta li {
       display: inline-block;
     }
+
     .blog-item .meta li:not(:last-child) {
-      margin-right:0.6rem;
+      margin-right: 0.6rem;
     }
+
     .blog-item .meta li::after {
       content: '';
       background: var(--color-gray);
       border-radius: 50%;
       display: inline-block;
-      height:0.19rem;
-      width:0.19rem;
-      margin-left:0.6rem;
+      height: 0.19rem;
+      width: 0.19rem;
+      margin-left: 0.6rem;
       vertical-align: middle;
     }
+
     .blog-item .meta li:last-child::after {
       display: none;
     }
+
     /*========== Contact ==========*/
 
     /*========== Footer ==========*/
@@ -532,10 +567,92 @@
     /*========== Media Queries ==========*/
     @media only screen and (max-width:1200px) {}
 
-    @media only screen and (max-width:968px) {}
+    @media only screen and (max-width:968px) {
 
-    @media only screen and (max-width:768px) {}
+      .about-content,
+      .about-img {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
 
-    @media only screen and (max-width:576px) {}
+      .about-img {
+        text-align: center;
+        margin-bottom: var(--m-2-5);
+      }
+    }
 
-    @media only screen and (max-width:320px) {}
+    @media only screen and (max-width:768px) {
+      body {
+        margin: var(--header-height) 0 0 0;
+      }
+
+      .container {
+        max-width: 568px;
+      }
+
+      .nav {
+        height: var(--header-height);
+      }
+
+      .nav-list {
+        flex-direction: column;
+        row-gap: 1.5rem;
+      }
+
+      .nav-menu {
+        position: fixed;
+        background: var(--color-white);
+        width: 80%;
+        height: 100%;
+        top: 0;
+        right: 100%;
+        padding: 4rem 0 0 3rem;
+        z-index: 100;
+      }
+
+      .nav-close,
+      .nav-toggle {
+        display: inline-flex;
+      }
+
+      .about-content .about-text,
+      .about-content .skills {
+        flex: 0 0 100%;
+        max-width:100%;
+      }
+
+      .about-content .about-text {
+        margin-bottom:var(--m-1-5);
+      }
+      .blog-item {
+        margin-bottom:var(--m-2-5);
+      }
+
+      .blog-item,
+      .fact-item,
+      .portfolio-item {
+        flex: 0 0 50%;
+        max-width:50%;
+      }
+    }
+
+    @media only screen and (max-width:576px) {
+      .blog-item,
+      .portfolio-item {
+        flex: 0 0 100%;
+        max-width:100%;
+      }
+
+      .blog-item .inner,
+      .portfolio-item-inner {
+        max-width: 360px;
+        margin:0 auto;
+      }
+    }
+
+    @media only screen and (max-width:320px) {
+      .fact-item {
+        flex:  0 0 100%;
+        max-width: 100%;
+      }
+    }
