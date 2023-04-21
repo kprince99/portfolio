@@ -605,9 +605,14 @@
         width: 80%;
         height: 100%;
         top: 0;
-        right: 100%;
+        right: -100%;
         padding: 4rem 0 0 3rem;
         z-index: 100;
+        transition: .3s;
+      }
+
+      .show-menu {
+        right:0;
       }
 
       .nav-close,
@@ -639,7 +644,7 @@
     @media only screen and (max-width:576px) {
       .home {
         position: relative;
-        top:-150px;
+        top:-100px;
 
       }
       
