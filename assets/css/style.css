@@ -637,12 +637,12 @@
     }
 
     @media only screen and (max-width:576px) {
-      
       .home {
         position: relative;
         top: -150px;
-      }
 
+      }
+      
       .blog-item,
       .portfolio-item {
         flex: 0 0 100%;
