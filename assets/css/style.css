@@ -69,6 +69,7 @@
     textarea {
       font-family: var(--body-font);
       font-size: var(--normal-font-size);
+      scroll-behavior: smooth!important;
     }
 
     body {
