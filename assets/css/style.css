@@ -52,7 +52,7 @@
     }
 
     /*========== Scroll Bar ==========*/
-  
+
     /*========== Responsive Typography ==========*/
 
     /*========== Base ==========*/
@@ -60,7 +60,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth!important;
+      scroll-behavior: smooth !important;
     }
 
     body,
@@ -69,7 +69,7 @@
     textarea {
       font-family: var(--body-font);
       font-size: var(--normal-font-size);
-      scroll-behavior: smooth!important;
+      scroll-behavior: smooth !important;
     }
 
     body {
@@ -561,6 +561,96 @@
     }
 
     /*========== Contact ==========*/
+    .contact-box {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+
+    .contact-form {
+      flex: 0 0 60%;
+      max-width: 60%;
+    }
+
+    .contact-data {
+      display: grid;
+      row-gap: 2rem;
+    }
+
+    .contact-subtitle {
+      margin-bottom: var(--m-0-5);
+    }
+
+    .contact-description {
+      display: inline-flex;
+      align-items: center;
+      column-gap: .5rem;
+    }
+
+    .contact-icon {
+      font-size: 1.2rem;
+    }
+
+    .contact-inputs {
+      display: grid;
+      row-gap: 2rem;
+      margin-bottom: var(--m-2-5);
+    }
+
+    .contact-content {
+      position: relative;
+      height: 3rem;
+      border-bottom: 2px solid var(--color-gray);
+    }
+
+    .contact-content span {
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      content: ' ';
+      height: 2px;
+      width: 0;
+      background: var(--color-primary);
+    }
+
+    .contact-input:focus ~ span {
+      width: 100%;
+    }
+
+    .contact-input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 1rem 1rem 1rem 0;
+      background: none;
+      color: #fff;
+      outline: none;
+      border: none;
+      z-index: 1;
+    }
+
+    .contact-label {
+      position: absolute;
+      top: .40rem;
+      width: 100%;
+      font-size: var(--small-font-size);
+    }
+
+    .contact-area {
+      height: 7rem;
+    }
+
+    .contact-area textarea {
+      resize: none;
+    }
+
+    .contact-input:focus + .contact-label {
+      top: -.75rem;
+      left: 0;
+      z-index: 10;
+      color: var(--color-primary);
+    }
 
     /*========== Footer ==========*/
     .footer {
@@ -621,7 +711,7 @@
       }
 
       .show-menu {
-        right:0;
+        right: 0;
       }
 
       .nav-close,
@@ -632,47 +722,48 @@
       .about-content .about-text,
       .about-content .skills {
         flex: 0 0 100%;
-        max-width:100%;
+        max-width: 100%;
       }
 
       .about-content .about-text {
-        margin-bottom:var(--m-1-5);
+        margin-bottom: var(--m-1-5);
       }
+
       .blog-item {
-        margin-bottom:var(--m-2-5);
+        margin-bottom: var(--m-2-5);
       }
 
       .blog-item,
       .fact-item,
       .portfolio-item {
         flex: 0 0 50%;
-        max-width:50%;
+        max-width: 50%;
       }
     }
 
     @media only screen and (max-width:576px) {
       .home {
         position: relative;
-        top:-100px;
+        top: -100px;
 
       }
-      
+
       .blog-item,
       .portfolio-item {
         flex: 0 0 100%;
-        max-width:100%;
+        max-width: 100%;
       }
 
       .blog-item .inner,
       .portfolio-item-inner {
         max-width: 360px;
-        margin:0 auto;
+        margin: 0 auto;
       }
     }
 
     @media only screen and (max-width:320px) {
       .fact-item {
-        flex:  0 0 100%;
+        flex: 0 0 100%;
         max-width: 100%;
       }
     }
