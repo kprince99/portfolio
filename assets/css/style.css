@@ -131,7 +131,7 @@
     /*========== Reusable css classes ==========*/
     .section .container {
       padding-top: 3.75rem;
-      padding-bottom: 4.75rem;
+      padding-bottom: 3.5rem;
     }
 
     .section-title {
@@ -232,6 +232,42 @@
       align-items: center;
       height: 100vh;
       min-height: 100vh;
+    }
+
+    .btn {
+      padding: 0.75rem 2rem;
+      line-height: 1;
+      border-radius: var(--border-radius);
+    }
+
+    .btn:focus {
+      outline: 0;
+    }
+
+    @keyframes button-push {
+      50% {
+        transform: scale(0.8);
+      }
+ 
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .btn-default {
+      color:#fff;
+      margin-top:20px;
+      vertical-align: middle;
+      display: inline-block;
+      background-color: var(--color-primary);
+      transform: perspective(1px) translateZ(0);
+    }
+
+    .btn-default:hover {
+      animation-name: button-push;
+      animation-duration: 0.3s;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
     }
 
     .home .intro {
@@ -612,7 +648,7 @@
       background: var(--color-primary);
     }
 
-    .contact-input:focus ~ span {
+    .contact-input:focus~span {
       width: 100%;
     }
 
@@ -624,7 +660,7 @@
       height: 100%;
       padding: 1rem 1rem 1rem 0;
       background: none;
-      color: #fff;
+      color: #000;
       outline: none;
       border: none;
       z-index: 1;
@@ -719,6 +755,7 @@
         display: inline-flex;
       }
 
+      .contact-content, .contact-form,
       .about-content .about-text,
       .about-content .skills {
         flex: 0 0 100%;
