@@ -14,7 +14,7 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Prince || Portfolio Website</title>
+    <title>Prince</title>
 </head>
 
 <body>
@@ -25,7 +25,6 @@
             <a href="" class="nav-logo">
                 <h2>Prince</h2>
             </a>
-
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li class="nav-list">
@@ -41,7 +40,7 @@
                         <a href="#blog" class="nav-link">Blogs</a>
                     </li>
                     <li class="nav-list">
-                        <a href="#home" class="nav-link">Contact US</a>
+                        <a href="#home" class="nav-link">Contact Us</a>
                     </li>
                 </ul>
                 <div class="nav-close" id="nav-close">
@@ -60,26 +59,39 @@
     <main class="main-content">
         <section class="home" id="home">
             <div class="container">
-                <div class="intro">
-                    <img src="assets/img/avatar-1.svg" alt="prince">
-                    <h1>Prince Kumar</h1>
-                    <span>I'am a <span class="info-text">Front-End Developer</span></span>
-                    <ul class="social-icons">
-                        <li><a href="" class="lni lni-instagram-original"></a></li>
-                        <li><a href="" class="lni lni-twitter-original"></a></li>
-                        <li><a href="" class="lni lni-github-original"></a></li>
-                        <li><a href="" class="lni lni-linkedin-original"></a></li>
-                    </ul>
-
-                    <div class="scroll-down">
-                        <a href="#about" class="mouse-wrapper">
-                            <span>Scoll Down</span>
-                            <span class="mouse">
-                                <span class="wheel"></span>
-                            </span>
-                        </a>
+                <div class="avatar_row">
+                    <div class="intro">
+                        <span class="info-text">Hello, I'am</span>
+                        <h1>Prince Kumar</h1>
+                        <span class="info-text"> A passionate Front-end React Developer </span>
+                        <ul class="social-icons">
+                            <li><a href="https://github.com/kprince99/" target="_blank" class="lni lni-github-original"></a></li>
+                            <li><a href="https://linkedin.com/in/kprince99" target="_blank" class="lni lni-linkedin-original"></a></li>
+                        </ul>
+                    </div>
+                    <div class="intro_avatar">
+                        <img class="pulse-image" src="assets/img/avatar-1.svg" alt="avatar">
                     </div>
                 </div>
+                <div class="skills_tech">
+                    <p>Tech Stack</p>
+                    <div class="logos">
+                        <ul>
+                            <li><img src="https://skillicons.dev/icons?i=html,css" alt="skill-icon"></li>
+                            <li><img src="https://skillicons.dev/icons?i=js,ts" alt="skill-icon"></li>
+                            <li><img src="https://skillicons.dev/icons?i=react,next" alt="skill-icon"></li>
+                            <li><img src="https://skillicons.dev/icons?i=tailwind,scss" alt="skill-icon"></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="scroll-down">
+                    <a href="#about" class="mouse-wrapper">
+                        <span>Scoll Down</span>
+                        <span class="mouse">
+                            <span class="wheel"></span>
+                        </span>
+                    </a>
+                </div> -->
             </div>
         </section>
     </main>
@@ -88,82 +100,59 @@
     <section class="about section" id="about">
         <div class="container">
             <h2 class="section-title padd-15">About Me</h2>
-            <div class="row">
-                <div class="about-img padd-15">
-                    <img src="assets/img/avatar-2.svg" alt="">
-                </div>
-                <div class="about-content padd-15">
-                    <div class="rounded">
-                        <div class="row">
-                            <div class="about-text">
-                                <p> I'm Prince Kumar, web developer, frontend Designer. I have rich
-                                experience in website design and building and customization, also i
-                                am good at Wordpress.
-                                </p>
-                                <div>
-                                    <a href="" class="btn btn-default">Download CV</a>
-                                </div>
+            <div class="about-content padd-15">
+                <div class="rounded">
+                    <div class="row">
+                        <div class="about-skills">
+                            <div class="about-img padd-15">
+                                <img src="assets/img/avatar-2.svg" alt="">
                             </div>
                             <div class="skills padd-15">
                                 <div class="row">
                                     <div class="skill-items">
                                         <h4>Development</h4>
                                         <div class="progress">
-                                            <div class="progress-in" style="width: 95%; background: rgb(255,209,92);"></div>
+                                            <div class="progress-in" style="width: 95%; background: rgb(255,209,92);">
+                                            </div>
                                             <div class="skills-percent">95%</div>
                                         </div>
                                     </div>
                                     <div class="skill-items">
                                         <h4>UI/UX Designing</h4>
                                         <div class="progress">
-                                            <div class="progress-in" style="width: 75%; background: rgb(255,70,96);"></div>
+                                            <div class="progress-in" style="width: 75%; background: rgb(255,70,96);">
+                                            </div>
                                             <div class="skills-percent">75%</div>
                                         </div>
                                     </div>
                                     <div class="skill-items">
                                         <h4>Problem Solving</h4>
                                         <div class="progress">
-                                            <div class="progress-in" style="width: 85%; background: rgb(108,108,229);"></div>
+                                            <div class="progress-in" style="width: 85%; background: rgb(108,108,229);">
+                                            </div>
                                             <div class="skills-percent">85%</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <!-- fact items -->
-                <div class="fact-item padd-15">
-                    <i class="lni lni-code"></i>
-                    <div class="details">
-                        <h3>286780</h3>
-                        <p>Lines of Code</p>
-                    </div>
-                </div>
-                <!-- fact items -->
-                <div class="fact-item padd-15">
-                    <i class="lni lni-coffee-cup"></i>
-                    <div class="details">
-                        <h3>600</h3>
-                        <p>Cups of coffee</p>
-                    </div>
-                </div>
-                <!-- fact items -->
-                <div class="fact-item padd-15">
-                    <i class="lni lni-thumbs-up"></i>
-                    <div class="details">
-                        <h3>28</h3>
-                        <p>Project done</p>
-                    </div>
-                </div>
-                <!-- fact items -->
-                <div class="fact-item padd-15">
-                    <i class="lni lni-cup"></i>
-                    <div class="details">
-                        <h3>2</h3>
-                        <p>Nominiees Winner</p>
+                        <div class="about-text">
+                            <p> As a Junior FrontEnd Developer, I am passionate and have experienced in web developer
+                                and frontend designing. I possess an impressive arsenal of skills in HTML, CSS,
+                                JavaScript, React, Tailwind, and SCSS. With a strong foundation in web design,
+                                development, and WordPress customization, I bring creativity and innovation to every
+                                project I undertake.
+                            </p>
+                            <br />
+                            <p>With a strong blend of design creativity and technical know-how, I enjoy turning concepts
+                                into user
+                                friendly digital realities.
+                            </p>
+                            <!-- <div>
+                                    <a href="" class="btn btn-default">Download CV</a>
+                                </div> -->
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -187,7 +176,6 @@
                             <img src="assets/img/1.svg" alt="">
                             <div class="mask"></div>
                         </div>
-                        <span class="term">Art, design</span>
                         <h3 class="portfolio-items-title">Leave Management System</h3>
                         <span class="more-button">More</span>
                     </div>
@@ -198,18 +186,18 @@
                             <img src="assets/img/2.svg" alt="">
                             <div class="mask"></div>
                         </div>
-                        <span class="term">Art, design</span>
                         <h3 class="portfolio-items-title">Leave Management System</h3>
                         <span class="more-button">More</span>
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="portfolio-item padd-15">
                     <div class="portfolio-item-inner">
                         <div class="portfolio-items-thumbnail">
                             <img src="assets/img/3.svg" alt="">
                             <div class="mask"></div>
                         </div>
-                        <span class="term">Art, design</span>
                         <h3 class="portfolio-items-title">Leave Management System</h3>
                         <span class="more-button">More</span>
                     </div>
@@ -277,7 +265,7 @@
         <div class="container">
 
             <h3 class="section-title padd-15">Contact Us</h3>
-            <d  iv class="row">
+            <d iv class="row">
                 <div class="contact-box padd-15">
                     <div class="contact-data">
                         <div class="contact-information">
@@ -290,29 +278,29 @@
                     </div>
                 </div>
 
-            <form action="" class="contact-form padd-15">
-              <div class="contact-inputs">
-                <div class="contact-content">
-                    <input type="email" class="contact-input">
-                    <label for="" class="contact-label">Email</label>
-                    <span></span>
-                </div>
+                <form action="" class="contact-form padd-15">
+                    <div class="contact-inputs">
+                        <div class="contact-content">
+                            <input type="email" class="contact-input">
+                            <label for="" class="contact-label">Email</label>
+                            <span></span>
+                        </div>
 
-                <div class="contact-content">
-                    <input type="text" class="contact-input">
-                    <label for="" class="contact-label">Subject</label>
-                    <span></span>
-                </div>
+                        <div class="contact-content">
+                            <input type="text" class="contact-input">
+                            <label for="" class="contact-label">Subject</label>
+                            <span></span>
+                        </div>
 
-                <div class="contact-content contact-area">
-                    <textarea name="" id="" cols="30" rows="10" class="contact-input"></textarea>
-                    <label for="" class="contact-label">Message</label>
-                    <span></span>
-                </div>
-              </div>
-              <a href="#" class="btn btn-default">Send Message</a>
-            </form> 
-          </div>
+                        <div class="contact-content contact-area">
+                            <textarea name="" id="" cols="30" rows="10" class="contact-input"></textarea>
+                            <label for="" class="contact-label">Message</label>
+                            <span></span>
+                        </div>
+
+                        <a href="#" class="btn btn-default">Send Message</a>
+                </form>
+        </div>
         </div>
     </section>
 
@@ -323,8 +311,8 @@
                 <p>&copy; In Love with Prince Kumar</p>
             </div>
         </div>
-    </footer>    
-</main>
+    </footer>
+    </main>
 
     <!--=============== JS ===============-->
     <script src="assets/js/main.js"></script>
