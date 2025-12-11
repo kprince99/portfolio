@@ -1,9 +1,10 @@
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById("nav-menu"),
-      navClose = document.getElementById("nav-close"),
-      navToggle = document.getElementById("nav-toggle");
+    navClose = document.getElementById("nav-close"),
+    navToggle = document.getElementById("nav-toggle"),
+    loader = document.getElementById("loading__animation");
 
-if(navToggle) {
+if (navToggle) {
     navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu')
     });
@@ -13,6 +14,7 @@ if(navToggle) {
     });
 }
 
+// ================ LOADER JS ==============
 
 /*============== MENU HIDDEN ===============*/
 

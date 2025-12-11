@@ -1,5 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"');
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -22,7 +23,7 @@
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Rubik", sans-serif;
-  --h1-font-size: 2.6rem;
+  --h1-font-size: 3.2rem;
   --h2-font-size: 1.75rem;
   --h3-font-size: 1.25rem;
   --normal-font-size: 1rem;
@@ -114,10 +115,23 @@ h3 {
 }
 
 /*========== Layout ==========*/
-.container {
+main section {
+  height: 100vh;
+  height: 100dvh;
+}
+
+.main-content {
   max-width: 968px;
-  width:100%;
   margin: auto;
+}
+
+.home .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .row {
@@ -132,14 +146,14 @@ h3 {
 
 /*========== Reusable css classes ==========*/
 .section .container {
-  padding-top: 3.75rem;
+  padding-top: 1.5rem;
   padding-bottom: 3.5rem;
 }
 
 .section-title {
   font-size: 2.25rem;
   margin-left: var(--m-0-75);
-  margin-bottom: var(--m-2-5);
+  margin-bottom: var(--m-2);
 }
 
 /*========== Buttons ==========*/
@@ -168,17 +182,6 @@ nav {
   font-weight: var(--font-semi-bold);
   letter-spacing: 0.125rem;
   position: relative;
-}
-
-.nav-logo::after {
-  position: absolute;
-  content: "";
-  width: 0.3rem;
-  height: 0.3rem;
-  border-radius: 50%;
-  background: var(--color-primary);
-  top: 56%;
-  right: -0.35rem;
 }
 
 .nav-menu {
@@ -228,18 +231,11 @@ nav {
 }
 
 /*========== Home ==========*/
-.home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  min-height: 100vh;
-}
 
 .btn {
-  padding: 0.75rem 2rem;
+  padding: 10px 16px;
   line-height: 1;
-  border-radius: var(--border-radius);
+  cursor: pointer;
 }
 
 .btn:focus {
@@ -274,14 +270,15 @@ nav {
 
 .avatar_row {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
 .home .intro {
-  max-width: 540px;
-  text-align: left;
-  width: 50%;
+  position: relative;
+  max-width: 700px;
+  text-align: center;
+  width: 100%;
 }
 
 .pulse-image {
@@ -294,14 +291,17 @@ nav {
   0% {
     box-shadow: 0 0 0 0 rgba(255, 109, 74, 0.7), 0 0 0 0 rgba(255, 109, 74, 0.7);
   }
+
   50% {
     box-shadow: 0 0 0 50px rgba(255, 109, 74, 0),
       0 0 0 0 rgba(255, 109, 74, 0.7);
   }
+
   80% {
     box-shadow: 0 0 0 50px rgba(255, 109, 74, 0),
       0 0 0 30px rgba(255, 109, 74, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0);
   }
@@ -313,25 +313,27 @@ nav {
 }
 
 .info-text {
-  font-size: #555;
+  color: #434753;
   font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
-.home .intro .social-icons {
+.info-paragraph {
+  font-size: 1.1rem;
+  color: oklch(60% 0.02 270);
+}
+
+.social-icons {
   margin-top: var(--m-1-5);
   margin-bottom: var(--m-2);
 }
 
-.home .intro .social-icons li {
-  display: inline-block;
+.social-icons .btn.github .fa {
+  color: #3b5998;
 }
 
-.home .intro .social-icons li:not(:last-child) {
-  margin-right: var(--m-1-5);
-}
-
-.home .intro .social-icons a {
-  font-size: var(--h2-font-size);
+.social-icons .btn.linkedin .fa {
+  color: #00aff0;
 }
 
 .scroll-down {
@@ -342,17 +344,16 @@ nav {
 }
 
 .skills_tech {
+  justify-content: center;
   align-items: center;
   color: #767676;
   display: flex;
   font-size: 1.7rem;
-  top:7rem;
-  left:6rem;
-  position: relative;;
+  position: relative;
 }
 
 .skills_tech p {
-  border-right: 2px solid rgba(45,46,50,.5);
+  border-right: 2px solid rgba(45, 46, 50, 0.5);
   color: #2d2e32;
   font-weight: 600;
   margin-right: 3rem;
@@ -370,7 +371,6 @@ nav {
 .skills_tech ul li {
   cursor: pointer;
 }
-
 
 .mouse-wrapper {
   font-size: var(--small-font-size);
@@ -427,6 +427,7 @@ nav {
   flex: 0 0 50%;
   max-width: 50%;
 }
+
 .about-img {
   flex: 0 0 25%;
   max-width: 25%;
@@ -749,10 +750,28 @@ nav {
   text-align: center;
 }
 
+/* ============LOADER ================ */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+/* Loader fadeout */
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 /*========== Customize Theme ==========*/
 
 /*========== Media Queries ==========*/
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1200px) {
 }
 
 @media only screen and (max-width: 968px) {
@@ -772,9 +791,21 @@ nav {
   body {
     margin: var(--header-height) 0 0 0;
   }
-  
-  .container {
-    max-width: 568px;
+
+  .home .container {
+    align-items: start;
+  }
+
+  .info-text {
+    font-size: 16px;
+  }
+
+  .info-paragraph {
+    font-size: 14px;
+  }
+
+  .intro h1 {
+    font-size: 2.5rem;
   }
 
   .nav {
@@ -829,39 +860,36 @@ nav {
     max-width: 50%;
   }
 
-  .avatar_row {
-    flex-direction: column-reverse;
-  }
-  .avatar_row .intro{
-    width:100%;
+  .avatar_row .intro {
+    width: 100%;
     text-align: center;
     position: relative;
-    top:2.5rem;;
+    padding: 0 20px;
   }
 
   .skills_tech {
     flex-direction: column;
-    left:0;
-    top:5rem;
+    left: 0;
+    padding: 0 20px;
     margin-bottom: var(--m-1-5);
   }
+
   .skills_tech p {
-    border-bottom: 2px solid rgba(45,46,50,.5);
+    border-bottom: 2px solid rgba(45, 46, 50, 0.5);
     border-right: none;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     margin-right: 0;
     padding-bottom: 0.5rem;
     padding-right: 0;
   }
 
   .skills_tech ul {
+    gap: 1.5rem;
     justify-content: center;
   }
-
 }
 
 @media only screen and (max-width: 576px) {
-
   .blog-item,
   .portfolio-item {
     flex: 0 0 100%;
@@ -873,8 +901,19 @@ nav {
     max-width: 360px;
     margin: 0 auto;
   }
+
+  .info-text {
+    font-size: 16px;
+  }
+
+  .info-paragraph {
+    font-size: 14px;
+  }
+
+  .intro h1 {
+    font-size: 2.25rem;
+  }
 }
 
 @media only screen and (max-width: 320px) {
-  
 }
