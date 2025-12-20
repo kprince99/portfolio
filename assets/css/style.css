@@ -4,7 +4,7 @@
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 3.5rem;
+  --header-height: 4rem;
   /*56px*/
 
   /*========== Colors ==========*/
@@ -23,7 +23,7 @@
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Rubik", sans-serif;
-  --h1-font-size: 3.2rem;
+  --h1-font-size: 5.25rem;
   --h2-font-size: 1.75rem;
   --h3-font-size: 1.25rem;
   --normal-font-size: 1rem;
@@ -104,6 +104,7 @@ h3 {
 h1 {
   font-size: var(--h1-font-size);
   text-transform: uppercase;
+  line-height: normal;
 }
 
 h2 {
@@ -115,7 +116,7 @@ h3 {
 }
 
 /*========== Layout ==========*/
-main section {
+main section:nth-child(1) {
   height: 100vh;
   height: 100dvh;
 }
@@ -231,11 +232,13 @@ nav {
 }
 
 /*========== Home ==========*/
-
 .btn {
   padding: 10px 16px;
   line-height: 1;
   cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #000;
+  outline: 0;
 }
 
 .btn:focus {
