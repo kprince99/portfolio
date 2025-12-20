@@ -118,7 +118,7 @@ h3 {
 /*========== Layout ==========*/
 main section:nth-child(1) {
   height: 100vh;
-  height: 100dvh;
+  height: 90dvh;
 }
 
 .main-content {
