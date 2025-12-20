@@ -118,7 +118,7 @@ h3 {
 /*========== Layout ==========*/
 main section:nth-child(1) {
   height: 100vh;
-  height: 90dvh;
+  height: 100dvh;
 }
 
 .main-content {
@@ -793,6 +793,11 @@ nav {
 @media only screen and (max-width: 768px) {
   body {
     margin: var(--header-height) 0 0 0;
+  }
+
+  main section:nth-child(1) {
+    height: 100vh;
+    height: 90dvh;
   }
 
   .home .container {
