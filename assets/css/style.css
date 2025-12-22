@@ -449,7 +449,7 @@ nav {
 }
 
 .about .dot-background-dark {
-  background-image: url("/assets/img/svg/dot-dark.svg");
+  background-image: url("../img/svg/dot-dark.svg");
 }
 
 /* .dark .element {
