@@ -126,10 +126,6 @@ main section:nth-child(1) {
   margin: auto;
 }
 
-.home {
-  margin-top: 5rem;
-}
-
 .home .container {
   display: flex;
   flex-direction: column;
@@ -151,6 +147,9 @@ main section:nth-child(1) {
 
 /*========== Reusable css classes ==========*/
 .section .container {
+  position: relative;
+  margin: auto;
+  max-width: 90%;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
@@ -169,10 +168,13 @@ header {
 
 /*========== NAV ==========*/
 nav {
+  position: relative;
+  margin: auto;
   height: var(--header-height);
   display: flex;
   align-items: center;
   column-gap: 3rem;
+  max-width: 90%;
 }
 
 .nav-logo {
@@ -461,12 +463,6 @@ nav {
   );
 } */
 
-.about .container {
-  position: relative;
-  margin: auto;
-  max-width: 90%;
-}
-
 .about-img {
   max-width: 100px;
   margin-bottom: 1em;
@@ -512,6 +508,151 @@ nav {
 }
 
 /*========== Experience ==========*/
+.experience-card {
+  position: relative;
+  padding-left: 20px;
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -5px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  background: #fd5c26;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(253, 92, 38, 0.4);
+}
+
+.period {
+  color: #fd5c26;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.role {
+  font-size: 36px;
+  color: var(--color-light);
+  margin: 6px 0;
+  line-height: normal;
+}
+
+.company {
+  font-size: 18px;
+  color: #9ca3af;
+}
+
+.company span {
+  color: white;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.skill {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.description {
+  margin: 18px 0;
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+.achievements {
+  list-style: none;
+}
+
+.achievements li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #a1a1aa;
+}
+
+.achievements li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background: #fd5c26;
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+/* CLIENT GRID */
+.clients-grid {
+  padding-top: 15px;
+  display: flex;
+  gap: 24px;
+}
+
+.client-names span {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 16px;
+  border: 1px solid var(--color-gray);
+  padding: 6px 10px;
+  text-align: center;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  filter: grayscale(1);
+  transition: filter 0.3s;
+}
+
+.client-card:hover .logo {
+  filter: grayscale(0);
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.client-card h4 {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.client-card p {
+  font-size: 10px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
 
 /*========== Portfolio ==========*/
 
@@ -762,30 +903,29 @@ nav {
 }
 
 /*========== Footer ==========*/
-.footer {
+footer {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-color: rgba(240, 240, 247, 0.4);
   padding: 30px 0;
+  width: 90%;
+  margin: auto;
 }
 
-.footer-text {
-  text-align: center;
+.footer-container {
+  display: flex;
+  justify-content: space-between;
 }
 
-/* ============LOADER ================ */
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-/* Loader fadeout */
-.fade-out {
-  animation: fadeOut 1s forwards;
+.footer-container .links {
+  display: flex;
+  gap: 1.5rem;
 }
 
-@keyframes fadeOut {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
+.footer-container span,
+.links {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
 }
 
 /*========== Customize Theme ==========*/
@@ -903,6 +1043,20 @@ nav {
 }
 
 @media only screen and (max-width: 576px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .role {
+    font-size: 30px;
+  }
+
+  .footer-container {
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
   .info-summary {
     padding-top: 15px;
     padding-bottom: 15px;
